@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=q">
+    <link href='https://api.mapbox.com/mapbox-gl-js/v2.14.1/mapbox-gl.css' rel='stylesheet' />
+    <title>Corona Statistics</title>
+    <style>
+        * {
+            margin: 0;
+        }
+
+        #map {
+            /* height: 100vh;
+            width: 100vw; */
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            width: 100%;
+        }
+
+        .mapboxgl-popup {
+            width: 120px;
+            /* max-width: 200px; */
+        }
+    </style>
+</head>
+
+<body>
+    <div id='map'></div>
+
+</body>
+<script src='https://api.mapbox.com/mapbox-gl-js/v2.14.1/mapbox-gl.js'></script>
+<script>
+    mapboxgl.accessToken = 'pk.eyJ1IjoiYWFkaXR5YS0xMjE5IiwiYSI6ImNsaWZ5eGN4bzBraTkzZHQ0YThzYXN3NzIifQ.PmRfrFijjRxeSuJRW8-FMQ';
+    const map = new mapboxgl.Map({
+        container: 'map',
+        // Choose from Mapbox's core styles, or make your own style with Mapbox Studio
+        style: 'mapbox://styles/mapbox/streets-v12',
+        center: [0, 0],
+        zoom: 1.4,
+        projection: 'naturalEarth' // starting projection
+    });
+</script>
+<script src="index.js"></script>
+
+</html>
